@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :SSN
       t.integer :total_deposited
       t.integer :total_withdrawn
+      t.string :password_digest
 
       t.timestamps
     end
