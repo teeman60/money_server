@@ -1,2 +1,0 @@
-class VaultController < ApplicationController
-end

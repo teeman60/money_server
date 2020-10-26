@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
 
+    skip_before_action :logged_in?, only: [:index, :show]
+
 
     def index
         users = User.all
-        render json: users 
+        # byebug
+        render json: UserSerializer.new(users) 
     end
+    
 
     def create
         user = User.new(user_params)
@@ -19,8 +23,9 @@ class UsersController < ApplicationController
 
 
     def show 
-        user = current_user
+        user = User.find(params[:id])
         render json: UserSerializer.new(user)
+        # render json: user
     end
     
 
