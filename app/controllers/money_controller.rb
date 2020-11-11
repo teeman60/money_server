@@ -3,9 +3,9 @@ class MoneyController < ApplicationController
     skip_before_action :logged_in?, only: [:index, :show]
 
     def index
-        moneys = Money.all
-        # byebug
-        render json: MoneySerializer.new(moneys) 
+        # moneys = Money.all
+        # # byebug
+        # render json: MoneySerializer.new(moneys) 
     end
 
 

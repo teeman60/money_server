@@ -1,4 +1,4 @@
 class VaultSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :round, :total_amount, :user_to_withdraw
+  attributes :round, :user_id, :total_amount, :user_to_withdraw
 end

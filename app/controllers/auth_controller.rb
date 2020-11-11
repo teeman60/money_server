@@ -1,6 +1,8 @@
 class AuthController < ApplicationController
 
     
+    skip_before_action :logged_in?
+
     
     def create 
             user = User.find_by(username: params[:username])
